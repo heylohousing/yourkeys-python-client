@@ -1,4 +1,4 @@
-# openapi_client.HealthCheckApi
+# yk_client.HealthCheckApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,13 +17,13 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import health_check_api
-from openapi_client.model.problem_details import ProblemDetails
+import yk_client
+from yk_client.api import health_check_api
+from yk_client.model.problem_details import ProblemDetails
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -39,14 +39,14 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = health_check_api.HealthCheckApi(api_client)
 
     # example, this endpoint has no required or optional parameters
     try:
         api_instance.api_health_check_get()
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling HealthCheckApi->api_health_check_get: %s\n" % e)
 ```
 

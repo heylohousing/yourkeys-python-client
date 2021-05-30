@@ -1,4 +1,4 @@
-# openapi_client.SalesApi
+# yk_client.SalesApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import sales_api
-from openapi_client.model.create_reservation_request import CreateReservationRequest
-from openapi_client.model.create_reservation_response import CreateReservationResponse
+import yk_client
+from yk_client.api import sales_api
+from yk_client.model.create_reservation_response import CreateReservationResponse
+from yk_client.model.create_reservation_request import CreateReservationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -42,7 +42,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sales_api.SalesApi(api_client)
     create_reservation_request = CreateReservationRequest(
@@ -103,7 +103,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_reservation_post(create_reservation_request=create_reservation_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling SalesApi->api_reservation_post: %s\n" % e)
 ```
 
@@ -147,14 +147,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import sales_api
-from openapi_client.model.create_reservation_request import CreateReservationRequest
-from openapi_client.model.create_reservation_response import CreateReservationResponse
+import yk_client
+from yk_client.api import sales_api
+from yk_client.model.create_reservation_response import CreateReservationResponse
+from yk_client.model.create_reservation_request import CreateReservationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -170,7 +170,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sales_api.SalesApi(api_client)
     create_reservation_request = CreateReservationRequest(
@@ -231,7 +231,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_sales_reservation_post(create_reservation_request=create_reservation_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling SalesApi->api_sales_reservation_post: %s\n" % e)
 ```
 
@@ -275,12 +275,12 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import sales_api
+import yk_client
+from yk_client.api import sales_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -296,7 +296,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sales_api.SalesApi(api_client)
     seller_reference = "seller_reference_example" # str, none_type |  (optional)
@@ -309,7 +309,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         api_instance.api_sales_reservation_upgrades_and_extras_post(seller_reference=seller_reference, purchase_reference=purchase_reference, development_id=development_id, plot_id=plot_id, file_stream=file_stream)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling SalesApi->api_sales_reservation_upgrades_and_extras_post: %s\n" % e)
 ```
 

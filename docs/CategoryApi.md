@@ -1,4 +1,4 @@
-# openapi_client.CategoryApi
+# yk_client.CategoryApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,12 +17,12 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import category_api
+import yk_client
+from yk_client.api import category_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -38,7 +38,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = category_api.CategoryApi(api_client)
     referencenumber = "referencenumber_example" # str | 
@@ -47,7 +47,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.api_progression_purchase_referencenumber_category_categorycode_put(referencenumber, categorycode)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling CategoryApi->api_progression_purchase_referencenumber_category_categorycode_put: %s\n" % e)
 ```
 

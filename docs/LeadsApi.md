@@ -1,4 +1,4 @@
-# openapi_client.LeadsApi
+# yk_client.LeadsApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,13 +17,13 @@ Endpoint for SPF to add leads. Validates the request then calls the leads API.
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import leads_api
-from openapi_client.model.add_broker_leads_request import AddBrokerLeadsRequest
+import yk_client
+from yk_client.api import leads_api
+from yk_client.model.add_broker_leads_request import AddBrokerLeadsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -39,7 +39,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = leads_api.LeadsApi(api_client)
     add_broker_leads_request = AddBrokerLeadsRequest(
@@ -67,7 +67,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Endpoint for SPF to add leads. Validates the request then calls the leads API.
         api_instance.api_leads_broker_add_post(add_broker_leads_request=add_broker_leads_request)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling LeadsApi->api_leads_broker_add_post: %s\n" % e)
 ```
 

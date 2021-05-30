@@ -1,4 +1,4 @@
-# openapi_client.LogoApi
+# yk_client.LogoApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,12 +18,12 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import logo_api
+import yk_client
+from yk_client.api import logo_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -39,7 +39,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = logo_api.LogoApi(api_client)
     development_id = "developmentId_example" # str | 
@@ -47,7 +47,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.logo_development_main_account_development_id_get(development_id)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling LogoApi->logo_development_main_account_development_id_get: %s\n" % e)
 ```
 
@@ -89,12 +89,12 @@ void (empty response body)
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import logo_api
+import yk_client
+from yk_client.api import logo_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -110,7 +110,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = logo_api.LogoApi(api_client)
     developer_id = "developerId_example" # str | 
@@ -118,7 +118,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         api_instance.logo_seller_developer_id_get(developer_id)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling LogoApi->logo_seller_developer_id_get: %s\n" % e)
 ```
 

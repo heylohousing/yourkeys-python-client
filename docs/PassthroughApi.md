@@ -1,4 +1,4 @@
-# openapi_client.PassthroughApi
+# yk_client.PassthroughApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,14 +17,14 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import passthrough_api
-from openapi_client.model.passthrough_url_response import PassthroughUrlResponse
-from openapi_client.model.passthrough_url_request import PassthroughUrlRequest
+import yk_client
+from yk_client.api import passthrough_api
+from yk_client.model.passthrough_url_request import PassthroughUrlRequest
+from yk_client.model.passthrough_url_response import PassthroughUrlResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = passthrough_api.PassthroughApi(api_client)
     passthrough_url_request = PassthroughUrlRequest(
@@ -55,7 +55,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_passthrough_generate_passthrough_url_post(passthrough_url_request=passthrough_url_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling PassthroughApi->api_passthrough_generate_passthrough_url_post: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# openapi_client.InventoryApi
+# yk_client.InventoryApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,14 +28,14 @@ Method | HTTP request | Description
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.delete_blocks_response import DeleteBlocksResponse
-from openapi_client.model.delete_blocks_request import DeleteBlocksRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.delete_blocks_response import DeleteBlocksResponse
+from yk_client.model.delete_blocks_request import DeleteBlocksRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -51,7 +51,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     delete_blocks_request = DeleteBlocksRequest(
@@ -70,7 +70,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_blocks_delete(delete_blocks_request=delete_blocks_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_blocks_delete: %s\n" % e)
 ```
 
@@ -114,14 +114,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.create_blocks_response import CreateBlocksResponse
-from openapi_client.model.create_blocks_request import CreateBlocksRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.create_blocks_response import CreateBlocksResponse
+from yk_client.model.create_blocks_request import CreateBlocksRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -137,7 +137,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     create_blocks_request = CreateBlocksRequest(
@@ -158,7 +158,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_blocks_post(create_blocks_request=create_blocks_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_blocks_post: %s\n" % e)
 ```
 
@@ -202,14 +202,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.update_blocks_request import UpdateBlocksRequest
-from openapi_client.model.update_blocks_response import UpdateBlocksResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.update_blocks_response import UpdateBlocksResponse
+from yk_client.model.update_blocks_request import UpdateBlocksRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -225,7 +225,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     update_blocks_request = UpdateBlocksRequest(
@@ -247,7 +247,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_blocks_put(update_blocks_request=update_blocks_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_blocks_put: %s\n" % e)
 ```
 
@@ -291,14 +291,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.problem_details import ProblemDetails
-from openapi_client.model.set_development_live_flag_request import SetDevelopmentLiveFlagRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.set_development_live_flag_request import SetDevelopmentLiveFlagRequest
+from yk_client.model.problem_details import ProblemDetails
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -314,7 +314,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     set_development_live_flag_request = SetDevelopmentLiveFlagRequest(
@@ -327,7 +327,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         api_instance.api_inventory_development_livestatusupdate_put(set_development_live_flag_request=set_development_live_flag_request)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_development_livestatusupdate_put: %s\n" % e)
 ```
 
@@ -371,14 +371,14 @@ void (empty response body)
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.create_developments_response import CreateDevelopmentsResponse
-from openapi_client.model.create_developments_request import CreateDevelopmentsRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.create_developments_response import CreateDevelopmentsResponse
+from yk_client.model.create_developments_request import CreateDevelopmentsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -394,7 +394,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     create_developments_request = CreateDevelopmentsRequest(
@@ -466,7 +466,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_developments_post(create_developments_request=create_developments_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_developments_post: %s\n" % e)
 ```
 
@@ -510,14 +510,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.update_developments_request import UpdateDevelopmentsRequest
-from openapi_client.model.update_developments_response import UpdateDevelopmentsResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.update_developments_response import UpdateDevelopmentsResponse
+from yk_client.model.update_developments_request import UpdateDevelopmentsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -533,7 +533,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     update_developments_request = UpdateDevelopmentsRequest(
@@ -606,7 +606,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_developments_put(update_developments_request=update_developments_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_developments_put: %s\n" % e)
 ```
 
@@ -650,13 +650,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.get_plots_response import GetPlotsResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.get_plots_response import GetPlotsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -672,7 +672,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     seller_reference = "sellerReference_example" # str, none_type | 
@@ -683,7 +683,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_housebuilder_seller_reference_development_development_id_block_block_id_plots_get(seller_reference, development_id, block_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_housebuilder_seller_reference_development_development_id_block_block_id_plots_get: %s\n" % e)
 ```
 
@@ -729,13 +729,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.blocks_response import BlocksResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.blocks_response import BlocksResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -751,7 +751,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     seller_reference = "sellerReference_example" # str, none_type | 
@@ -761,7 +761,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_housebuilder_seller_reference_development_development_id_blocks_get(seller_reference, development_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_housebuilder_seller_reference_development_development_id_blocks_get: %s\n" % e)
 ```
 
@@ -806,13 +806,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.inventory_developments_response import InventoryDevelopmentsResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.inventory_developments_response import InventoryDevelopmentsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -828,7 +828,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     seller_reference = "sellerReference_example" # str, none_type | 
@@ -837,7 +837,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_housebuilder_seller_reference_developments_get(seller_reference)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_housebuilder_seller_reference_developments_get: %s\n" % e)
 ```
 
@@ -881,14 +881,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.delete_plots_response import DeletePlotsResponse
-from openapi_client.model.delete_plots_request import DeletePlotsRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.delete_plots_request import DeletePlotsRequest
+from yk_client.model.delete_plots_response import DeletePlotsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -904,7 +904,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     delete_plots_request = DeletePlotsRequest(
@@ -924,7 +924,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_plots_delete(delete_plots_request=delete_plots_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_plots_delete: %s\n" % e)
 ```
 
@@ -968,14 +968,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.create_plots_response import CreatePlotsResponse
-from openapi_client.model.create_plots_request import CreatePlotsRequest
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.create_plots_request import CreatePlotsRequest
+from yk_client.model.create_plots_response import CreatePlotsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -991,7 +991,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     create_plots_request = CreatePlotsRequest(
@@ -1057,7 +1057,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_plots_post(create_plots_request=create_plots_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_plots_post: %s\n" % e)
 ```
 
@@ -1101,14 +1101,14 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import inventory_api
-from openapi_client.model.update_plots_request import UpdatePlotsRequest
-from openapi_client.model.update_plots_response import UpdatePlotsResponse
+import yk_client
+from yk_client.api import inventory_api
+from yk_client.model.update_plots_response import UpdatePlotsResponse
+from yk_client.model.update_plots_request import UpdatePlotsRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -1124,7 +1124,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = inventory_api.InventoryApi(api_client)
     update_plots_request = UpdatePlotsRequest(
@@ -1191,7 +1191,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_inventory_plots_put(update_plots_request=update_plots_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling InventoryApi->api_inventory_plots_put: %s\n" % e)
 ```
 

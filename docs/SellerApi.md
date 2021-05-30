@@ -1,4 +1,4 @@
-# openapi_client.SellerApi
+# yk_client.SellerApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,13 +18,13 @@ Returns all plots with an AVABL status for a the supplied development that the s
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import seller_api
-from openapi_client.model.plots_response import PlotsResponse
+import yk_client
+from yk_client.api import seller_api
+from yk_client.model.plots_response import PlotsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = seller_api.SellerApi(api_client)
     reference_number = "referenceNumber_example" # str, none_type | 
@@ -51,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Returns all plots with an AVABL status for a the supplied development that the supplied seller has access to.
         api_response = api_instance.api_seller_reference_number_developments_development_id_plots_get(reference_number, development_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling SellerApi->api_seller_reference_number_developments_development_id_plots_get: %s\n" % e)
 ```
 
@@ -96,13 +96,13 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Bearer):
 ```python
 import time
-import openapi_client
-from openapi_client.api import seller_api
-from openapi_client.model.seller_developments_response import SellerDevelopmentsResponse
+import yk_client
+from yk_client.api import seller_api
+from yk_client.model.seller_developments_response import SellerDevelopmentsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = yk_client.Configuration(
     host = "http://localhost"
 )
 
@@ -118,7 +118,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with yk_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = seller_api.SellerApi(api_client)
     reference_number = "referenceNumber_example" # str, none_type | 
@@ -127,7 +127,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_seller_reference_number_developments_get(reference_number)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except yk_client.ApiException as e:
         print("Exception when calling SellerApi->api_seller_reference_number_developments_get: %s\n" % e)
 ```
 
