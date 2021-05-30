@@ -9,8 +9,13 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from openapi_client.model.add_broker_lead_request import AddBrokerLeadRequest
+from openapi_client.model.add_broker_leads_request import AddBrokerLeadsRequest
+from openapi_client.model.applicant import Applicant
 from openapi_client.model.block_response import BlockResponse
 from openapi_client.model.blocks_response import BlocksResponse
+from openapi_client.model.broker_lead_reservation_id import BrokerLeadReservationId
+from openapi_client.model.broker_lead_reservations_response import BrokerLeadReservationsResponse
 from openapi_client.model.client import Client
 from openapi_client.model.client_address import ClientAddress
 from openapi_client.model.client_party import ClientParty

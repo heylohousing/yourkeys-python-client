@@ -118,6 +118,17 @@ class GetPlotResponse(ModelNormal):
             'floor': (int, none_type,),  # noqa: E501
             'energy_sap_rating': (int, none_type,),  # noqa: E501
             'shared_ownership': (bool, none_type,),  # noqa: E501
+            'spv_override': (bool,),  # noqa: E501
+            'spv_name': (str, none_type,),  # noqa: E501
+            'spv_address1': (str, none_type,),  # noqa: E501
+            'spv_address2': (str, none_type,),  # noqa: E501
+            'spv_town': (str, none_type,),  # noqa: E501
+            'spv_county': (str, none_type,),  # noqa: E501
+            'spv_postcode': (str, none_type,),  # noqa: E501
+            'spv_country_id': (int, none_type,),  # noqa: E501
+            'spv_vat_number': (str, none_type,),  # noqa: E501
+            'equity_share': (float, none_type,),  # noqa: E501
+            'share_value': (float, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -168,6 +179,17 @@ class GetPlotResponse(ModelNormal):
         'floor': 'floor',  # noqa: E501
         'energy_sap_rating': 'energySapRating',  # noqa: E501
         'shared_ownership': 'sharedOwnership',  # noqa: E501
+        'spv_override': 'spvOverride',  # noqa: E501
+        'spv_name': 'spvName',  # noqa: E501
+        'spv_address1': 'spvAddress1',  # noqa: E501
+        'spv_address2': 'spvAddress2',  # noqa: E501
+        'spv_town': 'spvTown',  # noqa: E501
+        'spv_county': 'spvCounty',  # noqa: E501
+        'spv_postcode': 'spvPostcode',  # noqa: E501
+        'spv_country_id': 'spvCountryId',  # noqa: E501
+        'spv_vat_number': 'spvVatNumber',  # noqa: E501
+        'equity_share': 'equityShare',  # noqa: E501
+        'share_value': 'shareValue',  # noqa: E501
     }
 
     read_only_vars = {
@@ -253,6 +275,17 @@ class GetPlotResponse(ModelNormal):
             floor (int, none_type): [optional]  # noqa: E501
             energy_sap_rating (int, none_type): [optional]  # noqa: E501
             shared_ownership (bool, none_type): [optional]  # noqa: E501
+            spv_override (bool): [optional]  # noqa: E501
+            spv_name (str, none_type): [optional]  # noqa: E501
+            spv_address1 (str, none_type): [optional]  # noqa: E501
+            spv_address2 (str, none_type): [optional]  # noqa: E501
+            spv_town (str, none_type): [optional]  # noqa: E501
+            spv_county (str, none_type): [optional]  # noqa: E501
+            spv_postcode (str, none_type): [optional]  # noqa: E501
+            spv_country_id (int, none_type): [optional]  # noqa: E501
+            spv_vat_number (str, none_type): [optional]  # noqa: E501
+            equity_share (float, none_type): [optional]  # noqa: E501
+            share_value (float, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -376,6 +409,17 @@ class GetPlotResponse(ModelNormal):
             floor (int, none_type): [optional]  # noqa: E501
             energy_sap_rating (int, none_type): [optional]  # noqa: E501
             shared_ownership (bool, none_type): [optional]  # noqa: E501
+            spv_override (bool): [optional]  # noqa: E501
+            spv_name (str, none_type): [optional]  # noqa: E501
+            spv_address1 (str, none_type): [optional]  # noqa: E501
+            spv_address2 (str, none_type): [optional]  # noqa: E501
+            spv_town (str, none_type): [optional]  # noqa: E501
+            spv_county (str, none_type): [optional]  # noqa: E501
+            spv_postcode (str, none_type): [optional]  # noqa: E501
+            spv_country_id (int, none_type): [optional]  # noqa: E501
+            spv_vat_number (str, none_type): [optional]  # noqa: E501
+            equity_share (float, none_type): [optional]  # noqa: E501
+            share_value (float, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

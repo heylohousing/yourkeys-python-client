@@ -19,6 +19,7 @@ from openapi_client.api.documents_api import DocumentsApi
 from openapi_client.api.event_api import EventApi
 from openapi_client.api.health_check_api import HealthCheckApi
 from openapi_client.api.inventory_api import InventoryApi
+from openapi_client.api.leads_api import LeadsApi
 from openapi_client.api.logo_api import LogoApi
 from openapi_client.api.onfido_api import OnfidoApi
 from openapi_client.api.passthrough_api import PassthroughApi

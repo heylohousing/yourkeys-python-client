@@ -42,6 +42,17 @@ Name | Type | Description | Notes
 **developer_code** | **str, none_type** |  | [optional] 
 **energy_sap_rating** | **str, none_type** |  | [optional] 
 **shared_ownership** | **bool, none_type** |  | [optional] 
+**spv_override** | **bool** |  | [optional] 
+**spv_name** | **str, none_type** |  | [optional] 
+**spv_address1** | **str, none_type** |  | [optional] 
+**spv_address2** | **str, none_type** |  | [optional] 
+**spv_town** | **str, none_type** |  | [optional] 
+**spv_county** | **str, none_type** |  | [optional] 
+**spv_postcode** | **str, none_type** |  | [optional] 
+**spv_country** | **str, none_type** |  | [optional] 
+**spv_vat_number** | **str, none_type** |  | [optional] 
+**equity_share** | **float, none_type** |  | [optional] 
+**share_value** | **float, none_type** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

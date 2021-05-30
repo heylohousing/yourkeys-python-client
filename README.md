@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 *InventoryApi* | [**api_inventory_plots_delete**](docs/InventoryApi.md#api_inventory_plots_delete) | **DELETE** /api/Inventory/plots | 
 *InventoryApi* | [**api_inventory_plots_post**](docs/InventoryApi.md#api_inventory_plots_post) | **POST** /api/Inventory/plots | 
 *InventoryApi* | [**api_inventory_plots_put**](docs/InventoryApi.md#api_inventory_plots_put) | **PUT** /api/Inventory/plots | 
+*LeadsApi* | [**api_leads_broker_add_post**](docs/LeadsApi.md#api_leads_broker_add_post) | **POST** /api/Leads/Broker/Add | Endpoint for SPF to add leads. Validates the request then calls the leads API.
 *LogoApi* | [**logo_development_main_account_development_id_get**](docs/LogoApi.md#logo_development_main_account_development_id_get) | **GET** /Logo/development-main-account/{developmentId} | 
 *LogoApi* | [**logo_seller_developer_id_get**](docs/LogoApi.md#logo_seller_developer_id_get) | **GET** /Logo/seller/{developerId} | 
 *OnfidoApi* | [**api_onfido_webhook_post**](docs/OnfidoApi.md#api_onfido_webhook_post) | **POST** /api/Onfido/Webhook | 
@@ -121,8 +122,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AddBrokerLeadRequest](docs/AddBrokerLeadRequest.md)
+ - [AddBrokerLeadsRequest](docs/AddBrokerLeadsRequest.md)
+ - [Applicant](docs/Applicant.md)
  - [BlockResponse](docs/BlockResponse.md)
  - [BlocksResponse](docs/BlocksResponse.md)
+ - [BrokerLeadReservationId](docs/BrokerLeadReservationId.md)
+ - [BrokerLeadReservationsResponse](docs/BrokerLeadReservationsResponse.md)
  - [Client](docs/Client.md)
  - [ClientAddress](docs/ClientAddress.md)
  - [ClientParty](docs/ClientParty.md)
