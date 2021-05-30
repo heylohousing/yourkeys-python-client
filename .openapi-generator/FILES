@@ -176,10 +176,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_add_broker_lead_request.py
-test/test_add_broker_leads_request.py
-test/test_applicant.py
-test/test_broker_lead_reservation_id.py
-test/test_broker_lead_reservations_response.py
-test/test_leads_api.py
 tox.ini
