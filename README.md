@@ -89,7 +89,10 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CategoryApi* | [**api_progression_purchase_referencenumber_category_categorycode_put**](docs/CategoryApi.md#api_progression_purchase_referencenumber_category_categorycode_put) | **PUT** /api/progression/purchase/{referencenumber}/category/{categorycode} | 
-*DocumentsApi* | [**api_reservation_referencenumber_documents_instructionpack_fileid_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_instructionpack_fileid_get) | **GET** /api/reservation/{referencenumber}/documents/instructionpack/{fileid} | 
+*DocumentsApi* | [**api_reservation_referencenumber_documents_category_company_id_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_category_company_id_get) | **GET** /api/reservation/{referencenumber}/documents/{category}/{companyId} | 
+*DocumentsApi* | [**api_reservation_referencenumber_documents_category_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_category_get) | **GET** /api/reservation/{referencenumber}/documents/{category} | 
+*DocumentsApi* | [**api_reservation_referencenumber_documents_file_file_id_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_file_file_id_get) | **GET** /api/reservation/{referencenumber}/documents/file/{fileId} | 
+*DocumentsApi* | [**api_reservation_referencenumber_documents_instructionpack_file_id_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_instructionpack_file_id_get) | **GET** /api/reservation/{referencenumber}/documents/instructionpack/{fileId} | 
 *DocumentsApi* | [**api_reservation_referencenumber_documents_instructionpack_get**](docs/DocumentsApi.md#api_reservation_referencenumber_documents_instructionpack_get) | **GET** /api/reservation/{referencenumber}/documents/instructionpack | 
 *EventApi* | [**api_progression_purchase_referencenumber_event_eventcode_put**](docs/EventApi.md#api_progression_purchase_referencenumber_event_eventcode_put) | **PUT** /api/progression/purchase/{referencenumber}/event/{eventcode} | 
 *HealthCheckApi* | [**api_health_check_get**](docs/HealthCheckApi.md#api_health_check_get) | **GET** /api/HealthCheck | 
@@ -105,7 +108,13 @@ Class | Method | HTTP request | Description
 *InventoryApi* | [**api_inventory_plots_delete**](docs/InventoryApi.md#api_inventory_plots_delete) | **DELETE** /api/Inventory/plots | 
 *InventoryApi* | [**api_inventory_plots_post**](docs/InventoryApi.md#api_inventory_plots_post) | **POST** /api/Inventory/plots | 
 *InventoryApi* | [**api_inventory_plots_put**](docs/InventoryApi.md#api_inventory_plots_put) | **PUT** /api/Inventory/plots | 
-*LeadsApi* | [**api_leads_broker_add_post**](docs/LeadsApi.md#api_leads_broker_add_post) | **POST** /api/Leads/Broker/Add | Endpoint for SPF to add leads. Validates the request then calls the leads API.
+*LeadsApi* | [**api_leads_broker_add_post**](docs/LeadsApi.md#api_leads_broker_add_post) | **POST** /api/Leads/Broker/Add | Endpoint for brokers to add leads. Validates the request then calls the leads API.
+*LeadsApi* | [**api_leads_broker_mortgage_application_submitted_post**](docs/LeadsApi.md#api_leads_broker_mortgage_application_submitted_post) | **POST** /api/Leads/Broker/MortgageApplicationSubmitted | Endpoint for brokers to notify that the mortgage application has been submitted to the lender. &lt;br /&gt;  Mapped to progression milestone &#x3D;&gt; S3-1 Mortgage Application Submitted.
+*LeadsApi* | [**api_leads_broker_mortgage_offer_issued_post**](docs/LeadsApi.md#api_leads_broker_mortgage_offer_issued_post) | **POST** /api/Leads/Broker/MortgageOfferIssued | Endpoint for brokers to notify that the mortgage offer has been issued. &lt;br /&gt;  Mapped to progression milestone &#x3D;&gt; S3-4 Mortgage Offer Issued.
+*LeadsApi* | [**api_leads_broker_reservation_reservation_id_get**](docs/LeadsApi.md#api_leads_broker_reservation_reservation_id_get) | **GET** /api/Leads/Broker/Reservation/{reservationId} | 
+*LeadsApi* | [**api_leads_broker_reservations_get**](docs/LeadsApi.md#api_leads_broker_reservations_get) | **GET** /api/Leads/Broker/Reservations | Endpoint for brokers to get reservations associated with leads.
+*LeadsApi* | [**api_leads_broker_valuation_instruction_post**](docs/LeadsApi.md#api_leads_broker_valuation_instruction_post) | **POST** /api/Leads/Broker/ValuationInstruction | Endpoint for brokers to notify that the valuation has been booked. &lt;br /&gt;  Mapped to progression milestone &#x3D;&gt; S3-2 Valuation Booked.
+*LeadsApi* | [**api_leads_broker_valuation_received_post**](docs/LeadsApi.md#api_leads_broker_valuation_received_post) | **POST** /api/Leads/Broker/ValuationReceived | Endpoint for brokers to notify that the valuation has been received (survey completed). &lt;br /&gt;  Mapped to progression milestone &#x3D;&gt; S3-3 Valuation Survey Completed.
 *LogoApi* | [**logo_development_main_account_development_id_get**](docs/LogoApi.md#logo_development_main_account_development_id_get) | **GET** /Logo/development-main-account/{developmentId} | 
 *LogoApi* | [**logo_seller_developer_id_get**](docs/LogoApi.md#logo_seller_developer_id_get) | **GET** /Logo/seller/{developerId} | 
 *OnfidoApi* | [**api_onfido_webhook_post**](docs/OnfidoApi.md#api_onfido_webhook_post) | **POST** /api/Onfido/Webhook | 
@@ -125,6 +134,8 @@ Class | Method | HTTP request | Description
  - [AddBrokerLeadRequest](docs/AddBrokerLeadRequest.md)
  - [AddBrokerLeadsRequest](docs/AddBrokerLeadsRequest.md)
  - [Applicant](docs/Applicant.md)
+ - [ApplicationLenderSubmission](docs/ApplicationLenderSubmission.md)
+ - [ApplicationSubmittedToLenderRequest](docs/ApplicationSubmittedToLenderRequest.md)
  - [BlockResponse](docs/BlockResponse.md)
  - [BlocksResponse](docs/BlocksResponse.md)
  - [BrokerLeadReservationId](docs/BrokerLeadReservationId.md)
@@ -163,10 +174,13 @@ Class | Method | HTTP request | Description
  - [DeletePlotsRequest](docs/DeletePlotsRequest.md)
  - [DeletePlotsResponse](docs/DeletePlotsResponse.md)
  - [DevelopmentPlot](docs/DevelopmentPlot.md)
+ - [DocumentStoreCategory](docs/DocumentStoreCategory.md)
  - [GetPlotResponse](docs/GetPlotResponse.md)
  - [GetPlotsResponse](docs/GetPlotsResponse.md)
  - [InventoryDevelopmentResponse](docs/InventoryDevelopmentResponse.md)
  - [InventoryDevelopmentsResponse](docs/InventoryDevelopmentsResponse.md)
+ - [MortgageOfferIssued](docs/MortgageOfferIssued.md)
+ - [MortgageOfferIssuedRequest](docs/MortgageOfferIssuedRequest.md)
  - [PassthroughUrlRequest](docs/PassthroughUrlRequest.md)
  - [PassthroughUrlResponse](docs/PassthroughUrlResponse.md)
  - [PlotsResponse](docs/PlotsResponse.md)
@@ -188,6 +202,10 @@ Class | Method | HTTP request | Description
  - [UpdatePlotResponse](docs/UpdatePlotResponse.md)
  - [UpdatePlotsRequest](docs/UpdatePlotsRequest.md)
  - [UpdatePlotsResponse](docs/UpdatePlotsResponse.md)
+ - [ValuationInstruction](docs/ValuationInstruction.md)
+ - [ValuationInstructionRequest](docs/ValuationInstructionRequest.md)
+ - [ValuationReceived](docs/ValuationReceived.md)
+ - [ValuationReceivedRequest](docs/ValuationReceivedRequest.md)
 
 
 ## Documentation For Authorization

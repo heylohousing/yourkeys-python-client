@@ -22,6 +22,7 @@ from yk_client.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
+from yk_client.model.document_store_category import DocumentStoreCategory
 
 
 class DocumentsApi(object):
@@ -36,23 +37,25 @@ class DocumentsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-        def __api_reservation_referencenumber_documents_instructionpack_fileid_get(
+        def __api_reservation_referencenumber_documents_category_company_id_get(
             self,
             referencenumber,
-            fileid,
+            category,
+            company_id,
             **kwargs
         ):
-            """api_reservation_referencenumber_documents_instructionpack_fileid_get  # noqa: E501
+            """api_reservation_referencenumber_documents_category_company_id_get  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.api_reservation_referencenumber_documents_instructionpack_fileid_get(referencenumber, fileid, async_req=True)
+            >>> thread = api.api_reservation_referencenumber_documents_category_company_id_get(referencenumber, category, company_id, async_req=True)
             >>> result = thread.get()
 
             Args:
                 referencenumber (str):
-                fileid (str):
+                category (DocumentStoreCategory):
+                company_id (int, none_type):
 
             Keyword Args:
                 _return_http_data_only (bool): response data without head status
@@ -101,29 +104,164 @@ class DocumentsApi(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['referencenumber'] = \
                 referencenumber
-            kwargs['fileid'] = \
-                fileid
+            kwargs['category'] = \
+                category
+            kwargs['company_id'] = \
+                company_id
             return self.call_with_http_info(**kwargs)
 
-        self.api_reservation_referencenumber_documents_instructionpack_fileid_get = _Endpoint(
+        self.api_reservation_referencenumber_documents_category_company_id_get = _Endpoint(
             settings={
                 'response_type': None,
                 'auth': [
                     'Bearer'
                 ],
-                'endpoint_path': '/api/reservation/{referencenumber}/documents/instructionpack/{fileid}',
-                'operation_id': 'api_reservation_referencenumber_documents_instructionpack_fileid_get',
+                'endpoint_path': '/api/reservation/{referencenumber}/documents/{category}/{companyId}',
+                'operation_id': 'api_reservation_referencenumber_documents_category_company_id_get',
                 'http_method': 'GET',
                 'servers': None,
             },
             params_map={
                 'all': [
                     'referencenumber',
-                    'fileid',
+                    'category',
+                    'company_id',
                 ],
                 'required': [
                     'referencenumber',
-                    'fileid',
+                    'category',
+                    'company_id',
+                ],
+                'nullable': [
+                    'company_id',
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'referencenumber':
+                        (str,),
+                    'category':
+                        (DocumentStoreCategory,),
+                    'company_id':
+                        (int, none_type,),
+                },
+                'attribute_map': {
+                    'referencenumber': 'referencenumber',
+                    'category': 'category',
+                    'company_id': 'companyId',
+                },
+                'location_map': {
+                    'referencenumber': 'path',
+                    'category': 'path',
+                    'company_id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__api_reservation_referencenumber_documents_category_company_id_get
+        )
+
+        def __api_reservation_referencenumber_documents_category_get(
+            self,
+            referencenumber,
+            category,
+            **kwargs
+        ):
+            """api_reservation_referencenumber_documents_category_get  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_reservation_referencenumber_documents_category_get(referencenumber, category, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                referencenumber (str):
+                category (DocumentStoreCategory):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['referencenumber'] = \
+                referencenumber
+            kwargs['category'] = \
+                category
+            return self.call_with_http_info(**kwargs)
+
+        self.api_reservation_referencenumber_documents_category_get = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/reservation/{referencenumber}/documents/{category}',
+                'operation_id': 'api_reservation_referencenumber_documents_category_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'referencenumber',
+                    'category',
+                ],
+                'required': [
+                    'referencenumber',
+                    'category',
                 ],
                 'nullable': [
                 ],
@@ -140,16 +278,16 @@ class DocumentsApi(object):
                 'openapi_types': {
                     'referencenumber':
                         (str,),
-                    'fileid':
-                        (str,),
+                    'category':
+                        (DocumentStoreCategory,),
                 },
                 'attribute_map': {
                     'referencenumber': 'referencenumber',
-                    'fileid': 'fileid',
+                    'category': 'category',
                 },
                 'location_map': {
                     'referencenumber': 'path',
-                    'fileid': 'path',
+                    'category': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -159,7 +297,259 @@ class DocumentsApi(object):
                 'content_type': [],
             },
             api_client=api_client,
-            callable=__api_reservation_referencenumber_documents_instructionpack_fileid_get
+            callable=__api_reservation_referencenumber_documents_category_get
+        )
+
+        def __api_reservation_referencenumber_documents_file_file_id_get(
+            self,
+            referencenumber,
+            file_id,
+            **kwargs
+        ):
+            """api_reservation_referencenumber_documents_file_file_id_get  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_reservation_referencenumber_documents_file_file_id_get(referencenumber, file_id, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                referencenumber (str):
+                file_id (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['referencenumber'] = \
+                referencenumber
+            kwargs['file_id'] = \
+                file_id
+            return self.call_with_http_info(**kwargs)
+
+        self.api_reservation_referencenumber_documents_file_file_id_get = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/reservation/{referencenumber}/documents/file/{fileId}',
+                'operation_id': 'api_reservation_referencenumber_documents_file_file_id_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'referencenumber',
+                    'file_id',
+                ],
+                'required': [
+                    'referencenumber',
+                    'file_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'referencenumber':
+                        (str,),
+                    'file_id':
+                        (str,),
+                },
+                'attribute_map': {
+                    'referencenumber': 'referencenumber',
+                    'file_id': 'fileId',
+                },
+                'location_map': {
+                    'referencenumber': 'path',
+                    'file_id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__api_reservation_referencenumber_documents_file_file_id_get
+        )
+
+        def __api_reservation_referencenumber_documents_instructionpack_file_id_get(
+            self,
+            referencenumber,
+            file_id,
+            **kwargs
+        ):
+            """api_reservation_referencenumber_documents_instructionpack_file_id_get  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_reservation_referencenumber_documents_instructionpack_file_id_get(referencenumber, file_id, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                referencenumber (str):
+                file_id (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['referencenumber'] = \
+                referencenumber
+            kwargs['file_id'] = \
+                file_id
+            return self.call_with_http_info(**kwargs)
+
+        self.api_reservation_referencenumber_documents_instructionpack_file_id_get = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/reservation/{referencenumber}/documents/instructionpack/{fileId}',
+                'operation_id': 'api_reservation_referencenumber_documents_instructionpack_file_id_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'referencenumber',
+                    'file_id',
+                ],
+                'required': [
+                    'referencenumber',
+                    'file_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'referencenumber':
+                        (str,),
+                    'file_id':
+                        (str,),
+                },
+                'attribute_map': {
+                    'referencenumber': 'referencenumber',
+                    'file_id': 'fileId',
+                },
+                'location_map': {
+                    'referencenumber': 'path',
+                    'file_id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__api_reservation_referencenumber_documents_instructionpack_file_id_get
         )
 
         def __api_reservation_referencenumber_documents_instructionpack_get(

@@ -23,6 +23,11 @@ from yk_client.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from yk_client.model.add_broker_leads_request import AddBrokerLeadsRequest
+from yk_client.model.application_submitted_to_lender_request import ApplicationSubmittedToLenderRequest
+from yk_client.model.broker_lead_reservations_response import BrokerLeadReservationsResponse
+from yk_client.model.mortgage_offer_issued_request import MortgageOfferIssuedRequest
+from yk_client.model.valuation_instruction_request import ValuationInstructionRequest
+from yk_client.model.valuation_received_request import ValuationReceivedRequest
 
 
 class LeadsApi(object):
@@ -41,7 +46,7 @@ class LeadsApi(object):
             self,
             **kwargs
         ):
-            """Endpoint for SPF to add leads. Validates the request then calls the leads API.  # noqa: E501
+            """Endpoint for brokers to add leads. Validates the request then calls the leads API.  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
@@ -153,4 +158,704 @@ class LeadsApi(object):
             },
             api_client=api_client,
             callable=__api_leads_broker_add_post
+        )
+
+        def __api_leads_broker_mortgage_application_submitted_post(
+            self,
+            **kwargs
+        ):
+            """Endpoint for brokers to notify that the mortgage application has been submitted to the lender. <br />  Mapped to progression milestone => S3-1 Mortgage Application Submitted.  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_mortgage_application_submitted_post(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                application_submitted_to_lender_request (ApplicationSubmittedToLenderRequest): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_mortgage_application_submitted_post = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/MortgageApplicationSubmitted',
+                'operation_id': 'api_leads_broker_mortgage_application_submitted_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'application_submitted_to_lender_request',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'application_submitted_to_lender_request':
+                        (ApplicationSubmittedToLenderRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'application_submitted_to_lender_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [
+                    'application/json-patch+json',
+                    'application/json',
+                    'text/json',
+                    'application/*+json'
+                ]
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_mortgage_application_submitted_post
+        )
+
+        def __api_leads_broker_mortgage_offer_issued_post(
+            self,
+            **kwargs
+        ):
+            """Endpoint for brokers to notify that the mortgage offer has been issued. <br />  Mapped to progression milestone => S3-4 Mortgage Offer Issued.  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_mortgage_offer_issued_post(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                mortgage_offer_issued_request (MortgageOfferIssuedRequest): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_mortgage_offer_issued_post = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/MortgageOfferIssued',
+                'operation_id': 'api_leads_broker_mortgage_offer_issued_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'mortgage_offer_issued_request',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'mortgage_offer_issued_request':
+                        (MortgageOfferIssuedRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'mortgage_offer_issued_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [
+                    'application/json-patch+json',
+                    'application/json',
+                    'text/json',
+                    'application/*+json'
+                ]
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_mortgage_offer_issued_post
+        )
+
+        def __api_leads_broker_reservation_reservation_id_get(
+            self,
+            reservation_id,
+            **kwargs
+        ):
+            """api_leads_broker_reservation_reservation_id_get  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_reservation_reservation_id_get(reservation_id, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                reservation_id (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                BrokerLeadReservationsResponse
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['reservation_id'] = \
+                reservation_id
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_reservation_reservation_id_get = _Endpoint(
+            settings={
+                'response_type': (BrokerLeadReservationsResponse,),
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/Reservation/{reservationId}',
+                'operation_id': 'api_leads_broker_reservation_reservation_id_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'reservation_id',
+                ],
+                'required': [
+                    'reservation_id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'reservation_id':
+                        (str,),
+                },
+                'attribute_map': {
+                    'reservation_id': 'reservationId',
+                },
+                'location_map': {
+                    'reservation_id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_reservation_reservation_id_get
+        )
+
+        def __api_leads_broker_reservations_get(
+            self,
+            **kwargs
+        ):
+            """Endpoint for brokers to get reservations associated with leads.  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_reservations_get(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                BrokerLeadReservationsResponse
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_reservations_get = _Endpoint(
+            settings={
+                'response_type': (BrokerLeadReservationsResponse,),
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/Reservations',
+                'operation_id': 'api_leads_broker_reservations_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_reservations_get
+        )
+
+        def __api_leads_broker_valuation_instruction_post(
+            self,
+            **kwargs
+        ):
+            """Endpoint for brokers to notify that the valuation has been booked. <br />  Mapped to progression milestone => S3-2 Valuation Booked.  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_valuation_instruction_post(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                valuation_instruction_request (ValuationInstructionRequest): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_valuation_instruction_post = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/ValuationInstruction',
+                'operation_id': 'api_leads_broker_valuation_instruction_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'valuation_instruction_request',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'valuation_instruction_request':
+                        (ValuationInstructionRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'valuation_instruction_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [
+                    'application/json-patch+json',
+                    'application/json',
+                    'text/json',
+                    'application/*+json'
+                ]
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_valuation_instruction_post
+        )
+
+        def __api_leads_broker_valuation_received_post(
+            self,
+            **kwargs
+        ):
+            """Endpoint for brokers to notify that the valuation has been received (survey completed). <br />  Mapped to progression milestone => S3-3 Valuation Survey Completed.  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.api_leads_broker_valuation_received_post(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                valuation_received_request (ValuationReceivedRequest): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                None
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.api_leads_broker_valuation_received_post = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'Bearer'
+                ],
+                'endpoint_path': '/api/Leads/Broker/ValuationReceived',
+                'operation_id': 'api_leads_broker_valuation_received_post',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'valuation_received_request',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'valuation_received_request':
+                        (ValuationReceivedRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'valuation_received_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'text/plain',
+                    'application/json',
+                    'text/json'
+                ],
+                'content_type': [
+                    'application/json-patch+json',
+                    'application/json',
+                    'text/json',
+                    'application/*+json'
+                ]
+            },
+            api_client=api_client,
+            callable=__api_leads_broker_valuation_received_post
         )
