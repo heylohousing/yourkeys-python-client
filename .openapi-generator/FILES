@@ -96,15 +96,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_application_lender_submission.py
-test/test_application_submitted_to_lender_request.py
-test/test_document_store_category.py
-test/test_mortgage_offer_issued.py
-test/test_mortgage_offer_issued_request.py
-test/test_valuation_instruction.py
-test/test_valuation_instruction_request.py
-test/test_valuation_received.py
-test/test_valuation_received_request.py
 tox.ini
 yk_client/__init__.py
 yk_client/api/__init__.py
