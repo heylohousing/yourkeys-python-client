@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **middle_name** | **str, none_type** |  | [optional] 
 **surname** | **str, none_type** |  | [optional] 
 **previous_surname** | **str, none_type** |  | [optional] 
-**gender** | **str, none_type** |  | [optional] 
 **nationality** | **str, none_type** |  | [optional] 
 **country_of_birth** | **str, none_type** |  | [optional] 
 **town_of_birth** | **str, none_type** |  | [optional] 

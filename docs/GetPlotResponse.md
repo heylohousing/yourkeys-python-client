@@ -57,6 +57,7 @@ Name | Type | Description | Notes
 **spv_vat_number** | **str, none_type** |  | [optional] 
 **equity_share** | **float, none_type** |  | [optional] 
 **share_value** | **float, none_type** |  | [optional] 
+**external_reference** | **str, none_type** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

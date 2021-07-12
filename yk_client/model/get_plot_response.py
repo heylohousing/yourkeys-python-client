@@ -129,6 +129,7 @@ class GetPlotResponse(ModelNormal):
             'spv_vat_number': (str, none_type,),  # noqa: E501
             'equity_share': (float, none_type,),  # noqa: E501
             'share_value': (float, none_type,),  # noqa: E501
+            'external_reference': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -190,6 +191,7 @@ class GetPlotResponse(ModelNormal):
         'spv_vat_number': 'spvVatNumber',  # noqa: E501
         'equity_share': 'equityShare',  # noqa: E501
         'share_value': 'shareValue',  # noqa: E501
+        'external_reference': 'externalReference',  # noqa: E501
     }
 
     read_only_vars = {
@@ -286,6 +288,7 @@ class GetPlotResponse(ModelNormal):
             spv_vat_number (str, none_type): [optional]  # noqa: E501
             equity_share (float, none_type): [optional]  # noqa: E501
             share_value (float, none_type): [optional]  # noqa: E501
+            external_reference (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -420,6 +423,7 @@ class GetPlotResponse(ModelNormal):
             spv_vat_number (str, none_type): [optional]  # noqa: E501
             equity_share (float, none_type): [optional]  # noqa: E501
             share_value (float, none_type): [optional]  # noqa: E501
+            external_reference (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
