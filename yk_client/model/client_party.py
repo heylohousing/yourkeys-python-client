@@ -86,6 +86,7 @@ class ClientParty(ModelNormal):
             'middle_name': (str, none_type,),  # noqa: E501
             'surname': (str, none_type,),  # noqa: E501
             'previous_surname': (str, none_type,),  # noqa: E501
+            'gender': (str, none_type,),  # noqa: E501
             'nationality': (str, none_type,),  # noqa: E501
             'country_of_birth': (str, none_type,),  # noqa: E501
             'town_of_birth': (str, none_type,),  # noqa: E501
@@ -110,6 +111,7 @@ class ClientParty(ModelNormal):
         'middle_name': 'middleName',  # noqa: E501
         'surname': 'surname',  # noqa: E501
         'previous_surname': 'previousSurname',  # noqa: E501
+        'gender': 'gender',  # noqa: E501
         'nationality': 'nationality',  # noqa: E501
         'country_of_birth': 'countryOfBirth',  # noqa: E501
         'town_of_birth': 'townOfBirth',  # noqa: E501
@@ -169,6 +171,7 @@ class ClientParty(ModelNormal):
             middle_name (str, none_type): [optional]  # noqa: E501
             surname (str, none_type): [optional]  # noqa: E501
             previous_surname (str, none_type): [optional]  # noqa: E501
+            gender (str, none_type): [optional]  # noqa: E501
             nationality (str, none_type): [optional]  # noqa: E501
             country_of_birth (str, none_type): [optional]  # noqa: E501
             town_of_birth (str, none_type): [optional]  # noqa: E501
@@ -266,6 +269,7 @@ class ClientParty(ModelNormal):
             middle_name (str, none_type): [optional]  # noqa: E501
             surname (str, none_type): [optional]  # noqa: E501
             previous_surname (str, none_type): [optional]  # noqa: E501
+            gender (str, none_type): [optional]  # noqa: E501
             nationality (str, none_type): [optional]  # noqa: E501
             country_of_birth (str, none_type): [optional]  # noqa: E501
             town_of_birth (str, none_type): [optional]  # noqa: E501

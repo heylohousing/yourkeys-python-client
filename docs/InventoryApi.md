@@ -424,12 +424,6 @@ with yk_client.ApiClient(configuration) as api_client:
                 vendor_company_name="vendor_company_name_example",
                 terms_and_conditions="terms_and_conditions_example",
                 land_tax_region="land_tax_region_example",
-                shared_ownership_rental_percentage=3.14,
-                shared_ownership_equity_lower_percentage=3.14,
-                shared_ownership_equity_upper_percentage=3.14,
-                buildings_insurance_excluding_vat=3.14,
-                lease_management_fee_excluding_vat=3.14,
-                monthly_rent_increase="monthly_rent_increase_example",
                 uk_finance_disclosure_of_incentives_form_details=CreateCmlRequest(
                     sellers_details=CmlSellerDetailsRequest(
                         names_of_organisations_individuals="names_of_organisations_individuals_example",
@@ -564,12 +558,6 @@ with yk_client.ApiClient(configuration) as api_client:
                 vendor_company_name="vendor_company_name_example",
                 terms_and_conditions="terms_and_conditions_example",
                 land_tax_region="land_tax_region_example",
-                shared_ownership_rental_percentage=3.14,
-                shared_ownership_equity_lower_percentage=3.14,
-                shared_ownership_equity_upper_percentage=3.14,
-                buildings_insurance_excluding_vat=3.14,
-                lease_management_fee_excluding_vat=3.14,
-                monthly_rent_increase="monthly_rent_increase_example",
                 uk_finance_disclosure_of_incentives_form_details=UpdateCmlRequest(
                     sellers_details=CmlSellerDetailsRequest(
                         names_of_organisations_individuals="names_of_organisations_individuals_example",

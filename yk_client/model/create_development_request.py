@@ -104,12 +104,6 @@ class CreateDevelopmentRequest(ModelNormal):
             'vendor_company_name': (str, none_type,),  # noqa: E501
             'terms_and_conditions': (str, none_type,),  # noqa: E501
             'land_tax_region': (str, none_type,),  # noqa: E501
-            'shared_ownership_rental_percentage': (float, none_type,),  # noqa: E501
-            'shared_ownership_equity_lower_percentage': (float, none_type,),  # noqa: E501
-            'shared_ownership_equity_upper_percentage': (float, none_type,),  # noqa: E501
-            'buildings_insurance_excluding_vat': (float, none_type,),  # noqa: E501
-            'lease_management_fee_excluding_vat': (float, none_type,),  # noqa: E501
-            'monthly_rent_increase': (str, none_type,),  # noqa: E501
             'uk_finance_disclosure_of_incentives_form_details': (CreateCmlRequest,),  # noqa: E501
         }
 
@@ -142,12 +136,6 @@ class CreateDevelopmentRequest(ModelNormal):
         'vendor_company_name': 'vendorCompanyName',  # noqa: E501
         'terms_and_conditions': 'termsAndConditions',  # noqa: E501
         'land_tax_region': 'landTaxRegion',  # noqa: E501
-        'shared_ownership_rental_percentage': 'sharedOwnershipRentalPercentage',  # noqa: E501
-        'shared_ownership_equity_lower_percentage': 'sharedOwnershipEquityLowerPercentage',  # noqa: E501
-        'shared_ownership_equity_upper_percentage': 'sharedOwnershipEquityUpperPercentage',  # noqa: E501
-        'buildings_insurance_excluding_vat': 'buildingsInsuranceExcludingVAT',  # noqa: E501
-        'lease_management_fee_excluding_vat': 'leaseManagementFeeExcludingVAT',  # noqa: E501
-        'monthly_rent_increase': 'monthlyRentIncrease',  # noqa: E501
         'uk_finance_disclosure_of_incentives_form_details': 'ukFinanceDisclosureOfIncentivesFormDetails',  # noqa: E501
     }
 
@@ -215,12 +203,6 @@ class CreateDevelopmentRequest(ModelNormal):
             vendor_company_name (str, none_type): [optional]  # noqa: E501
             terms_and_conditions (str, none_type): [optional]  # noqa: E501
             land_tax_region (str, none_type): [optional]  # noqa: E501
-            shared_ownership_rental_percentage (float, none_type): [optional]  # noqa: E501
-            shared_ownership_equity_lower_percentage (float, none_type): [optional]  # noqa: E501
-            shared_ownership_equity_upper_percentage (float, none_type): [optional]  # noqa: E501
-            buildings_insurance_excluding_vat (float, none_type): [optional]  # noqa: E501
-            lease_management_fee_excluding_vat (float, none_type): [optional]  # noqa: E501
-            monthly_rent_increase (str, none_type): [optional]  # noqa: E501
             uk_finance_disclosure_of_incentives_form_details (CreateCmlRequest): [optional]  # noqa: E501
         """
 
@@ -326,12 +308,6 @@ class CreateDevelopmentRequest(ModelNormal):
             vendor_company_name (str, none_type): [optional]  # noqa: E501
             terms_and_conditions (str, none_type): [optional]  # noqa: E501
             land_tax_region (str, none_type): [optional]  # noqa: E501
-            shared_ownership_rental_percentage (float, none_type): [optional]  # noqa: E501
-            shared_ownership_equity_lower_percentage (float, none_type): [optional]  # noqa: E501
-            shared_ownership_equity_upper_percentage (float, none_type): [optional]  # noqa: E501
-            buildings_insurance_excluding_vat (float, none_type): [optional]  # noqa: E501
-            lease_management_fee_excluding_vat (float, none_type): [optional]  # noqa: E501
-            monthly_rent_increase (str, none_type): [optional]  # noqa: E501
             uk_finance_disclosure_of_incentives_form_details (CreateCmlRequest): [optional]  # noqa: E501
         """
 
