@@ -427,7 +427,6 @@ with yk_client.ApiClient(configuration) as api_client:
                 shared_ownership_rental_percentage=3.14,
                 shared_ownership_equity_lower_percentage=3.14,
                 shared_ownership_equity_upper_percentage=3.14,
-                buildings_insurance_excluding_vat=3.14,
                 lease_management_fee_excluding_vat=3.14,
                 monthly_rent_increase="monthly_rent_increase_example",
                 uk_finance_disclosure_of_incentives_form_details=CreateCmlRequest(
@@ -567,7 +566,6 @@ with yk_client.ApiClient(configuration) as api_client:
                 shared_ownership_rental_percentage=3.14,
                 shared_ownership_equity_lower_percentage=3.14,
                 shared_ownership_equity_upper_percentage=3.14,
-                buildings_insurance_excluding_vat=3.14,
                 lease_management_fee_excluding_vat=3.14,
                 monthly_rent_increase="monthly_rent_increase_example",
                 uk_finance_disclosure_of_incentives_form_details=UpdateCmlRequest(
@@ -1048,6 +1046,7 @@ with yk_client.ApiClient(configuration) as api_client:
                 spv_vat_number="spv_vat_number_example",
                 equity_share=3.14,
                 share_value=3.14,
+                buildings_insurance_excluding_vat=3.14,
             ),
         ],
     ) # CreatePlotsRequest |  (optional)
@@ -1182,6 +1181,7 @@ with yk_client.ApiClient(configuration) as api_client:
                 spv_vat_number="spv_vat_number_example",
                 equity_share=3.14,
                 share_value=3.14,
+                buildings_insurance_excluding_vat=3.14,
             ),
         ],
     ) # UpdatePlotsRequest |  (optional)

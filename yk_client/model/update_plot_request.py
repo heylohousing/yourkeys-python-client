@@ -125,6 +125,7 @@ class UpdatePlotRequest(ModelNormal):
             'spv_vat_number': (str, none_type,),  # noqa: E501
             'equity_share': (float, none_type,),  # noqa: E501
             'share_value': (float, none_type,),  # noqa: E501
+            'buildings_insurance_excluding_vat': (float, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -182,6 +183,7 @@ class UpdatePlotRequest(ModelNormal):
         'spv_vat_number': 'spvVatNumber',  # noqa: E501
         'equity_share': 'equityShare',  # noqa: E501
         'share_value': 'shareValue',  # noqa: E501
+        'buildings_insurance_excluding_vat': 'buildingsInsuranceExcludingVAT',  # noqa: E501
     }
 
     read_only_vars = {
@@ -274,6 +276,7 @@ class UpdatePlotRequest(ModelNormal):
             spv_vat_number (str, none_type): [optional]  # noqa: E501
             equity_share (float, none_type): [optional]  # noqa: E501
             share_value (float, none_type): [optional]  # noqa: E501
+            buildings_insurance_excluding_vat (float, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -404,6 +407,7 @@ class UpdatePlotRequest(ModelNormal):
             spv_vat_number (str, none_type): [optional]  # noqa: E501
             equity_share (float, none_type): [optional]  # noqa: E501
             share_value (float, none_type): [optional]  # noqa: E501
+            buildings_insurance_excluding_vat (float, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -31,7 +31,6 @@ Name | Type | Description | Notes
 **shared_ownership_rental_percentage** | **float, none_type** |  | [optional] 
 **shared_ownership_equity_lower_percentage** | **float, none_type** |  | [optional] 
 **shared_ownership_equity_upper_percentage** | **float, none_type** |  | [optional] 
-**buildings_insurance_excluding_vat** | **float, none_type** |  | [optional] 
 **lease_management_fee_excluding_vat** | **float, none_type** |  | [optional] 
 **monthly_rent_increase** | **str, none_type** |  | [optional] 
 **uk_finance_disclosure_of_incentives_form_details** | [**UpdateCmlRequest**](UpdateCmlRequest.md) |  | [optional] 
